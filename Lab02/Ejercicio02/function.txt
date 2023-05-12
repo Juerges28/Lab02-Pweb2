@@ -1,0 +1,16 @@
+<input type="text" value= "">
+<input type="Button" value= "x" onClick="invertr()">
+
+<script>
+function invert(palabra){
+const myArray = palabra.split("");
+let j = 0;
+let x = myArray.length;
+let text = myArray[x-1];
+for(let i = x-2; i >= 0; i--){
+ text = text.concat(myArray[i]);
+   }
+       return text
+     }
+   </script>
+

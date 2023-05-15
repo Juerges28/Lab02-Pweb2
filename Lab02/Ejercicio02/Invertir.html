@@ -8,31 +8,25 @@
 	<meta name="generator"content="Vim" />
 	<meta name="author"content="Jorge Luis Escobedo Ocaña"/>   
 	<script>
-			function invert(palabra){
-			const myArray = palabra.split("");
+			function invert(){
+			const myArray = document.getElementById("texto").value.split("");			
 			let j = 0;
 			let x = myArray.length;
 			let text = myArray[x-1];
 			for(let i = x-2; i >= 0; i--){
  				text = text.concat(myArray[i]);
 			}
-			return text
+			document.getElementById("result").innerHTML = text;
 		}
 	</script>
 </head>  
 <body>    
-    <header>
-    </header>
-	<nav>
-    </nav>
-    <section>      
-        <article>
-		
-        </article>      
-    </section>
-    <aside>
-    </aside>
-    <footer>
-    </footer>
+				<h1>Invertir Texto 3000</h1>
+				<label for="texto">Introduce el texto:</label>
+				<input type="text" id="texto">
+				<button onclick="invert()">Hazlo</button></br>
+				<label>Palabra Inversa: </label><br>
+				<div id="result"></div>
+
 </body>  
 </html>

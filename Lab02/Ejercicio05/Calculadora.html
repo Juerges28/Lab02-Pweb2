@@ -16,15 +16,17 @@
 										tableHTML += "</table>";
 
 						document.getElementById("table").innerHTML = tableHTML;
+						document.getElementById("result").innerHTML = "El Resultado es: 0";
 						}
-						function add(){
-										var values = document.getElementByClassName("value");
+						function addNumbers(){
+										var values = document.getElementsByClassName('valor');
 
 										var add = 0;
-										for (var i = 0; i < valores.length; i++){
-											suma += parseFloat(valores[i].value);
+
+										for (var i = 0; i < values.length; i++){
+											add += parseFloat(values[i].value);
 										}
-										document.getElementById("result").innerHTML = "La suma es: " + suma;
+										document.getElementById("result").innerHTML = "El resultado es: " + add;
 						}
 		</script>
 </head>
@@ -32,10 +34,11 @@
 		<h1>Calculadora (SUMA)</h1>
 		<form id="formTable" onsubmit="createTable(); return false;">
 						<label for = "numValues">Numero de valores:</label>
-						//cambiado min = "1" a min = "2" para que siempre se sumen numeros.
 						<input type = "number" id = "numValues" min = "2" required>
 						<button type = "submit">Tabla</button>
 		</form>
 		<div id = "table"></div>
+		<button onclick = "addNumbers()">Calcular</button>
+		<h2 id = "result"></h2>
 </body>
 </html>

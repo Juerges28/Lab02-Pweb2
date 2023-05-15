@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Recuperando codigo de la Sesion - Ej 04</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Jorge Luis Escobedo Ocaña">
+		<script>
+			function getCode(){
+							var url = document.getElementById("url").value;
+
+							var code = url.split("/").pop().replace(/-/g, "");
+
+							document.getElementById("result").innerHTML = code;
+			}
+		</script>
+</head>
+<body>
+		<h1>Recuperando codigo de sesion Google Meet.</h1>
+		<label for="url">Introduce el URL de la reunion de Google Meet:</label>
+		<input type="text" id="url">
+		<button onclick="getCode()">Go</button>
+		<p>Codigo Recuperado: <span id="result"></span></p>
+</body>
+</html>

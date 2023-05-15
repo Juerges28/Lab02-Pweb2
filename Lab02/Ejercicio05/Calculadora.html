@@ -13,7 +13,10 @@
 </head>
 <body>
 		<h1>Calculadora (SUMA)</h1>
-		<form id="formTable">
+		<form id="formTable" onsubmit="createTable(); return false;">
+						<label for = "numValues">Numero de valores:</label>
+						<input type = "number" id = "numValues" min = "1" required>
+						<button type = "submit">Tabla</button>
 		</form>
 
 </body>

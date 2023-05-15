@@ -8,14 +8,14 @@
 						function createTable(){
 										var numValues = document.getElementById("numValues").value;
 
-										var table = <table>;
+										var tableHTML = "<table>";
 
 										for (var i = 0; i < numValues; i++){
-														table += "<tr><td>Valor " + (i+1) + ":</td><td><input type = 'number' class = 'valor' required></td></tr>";
+														tableHTML += "<tr><td>Valor " + (i+1) + ":</td><td><input type='number' class='valor' required></td></tr>";
 										}
-						table += </table>;
+										tableHTML += "</table>";
 
-						document.getElementById("table").innerHTML = table;
+						document.getElementById("table").innerHTML = tableHTML;
 						}
 						function add(){
 						}
